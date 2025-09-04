@@ -1,0 +1,63 @@
+{
+  "proxy_type": "free",
+  "providers": [
+    {
+      "name": "proxy-list.download",
+      "type": "http",
+      "auto_fetch": true,
+      "url": "https://www.proxy-list.download/api/v1/get?type=http&anon=elite&country=US",
+      "format": "ip:port",
+      "notes": "Liste automatique de proxies HTTP élite US"
+    },
+    {
+      "name": "proxylist.geonode.com",
+      "type": "http",
+      "auto_fetch": true, 
+      "url": "https://proxylist.geonode.com/api/proxy-list?limit=10&page=1&sort_by=lastChecked&sort_type=desc&country=US&protocols=http",
+      "format": "json",
+      "notes": "API proxy Geonode avec format JSON"
+    },
+    {
+      "name": "manual_proxies",
+      "type": "manual",
+      "proxies": [
+        {
+          "host": "51.158.68.133",
+          "port": 8811,
+          "type": "http",
+          "country": "FR",
+          "status": "unknown"
+        },
+        {
+          "host": "144.217.7.124", 
+          "port": 5566,
+          "type": "http",
+          "country": "CA",
+          "status": "unknown"
+        },
+        {
+          "host": "20.111.54.16",
+          "port": 8123,
+          "type": "http", 
+          "country": "US",
+          "status": "unknown"
+        }
+      ]
+    }
+  ],
+  "test_settings": {
+    "test_url": "https://httpbin.org/ip",
+    "timeout": 10,
+    "max_retries": 3,
+    "check_anonymity": true
+  },
+  "rotation_settings": {
+    "rotate_after_requests": 50,
+    "rotate_after_errors": 3,
+    "rotation_delay": 2
+  },
+  "fallback": {
+    "use_no_proxy": true,
+    "log_proxy_failures": true
+  }
+}

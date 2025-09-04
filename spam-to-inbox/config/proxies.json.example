@@ -1,0 +1,21 @@
+{
+  "provider": "smartproxy",
+  "username": "sp_your_username",
+  "password": "your_proxy_password",
+  "sticky_sessions": true,
+  "session_duration": 30,
+  "notes": {
+    "setup": "Remplacez 'sp_your_username' et 'your_proxy_password' par vos vrais identifiants SmartProxy",
+    "sticky_format": "Le format username-session-{id} est CRITIQUE pour maintenir la même IP",
+    "session_duration": "Durée en minutes avant expiration automatique de session",
+    "providers_supported": [
+      "SmartProxy (recommandé pour sticky sessions)",
+      "Autres proxies SOCKS5 compatibles"
+    ]
+  },
+  "advanced_config": {
+    "max_retries": 3,
+    "connection_timeout": 10,
+    "session_cleanup_interval": 300
+  }
+}

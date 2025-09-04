@@ -1,0 +1,8 @@
+email,password,app_password
+user1@hotmail.com,password123,
+user2@outlook.com,password456,app_pwd_if_2fa_enabled
+user3@live.com,mypassword789,
+admin@hotmail.fr,securepass2023,16charapppassword
+test@outlook.fr,testpass456,
+contact@live.co.uk,ukpassword789,
+demo@msn.com,demopass123,

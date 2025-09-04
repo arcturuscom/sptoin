@@ -1,0 +1,54 @@
+# Spam-to-Inbox Requirements
+# Core dependencies for email automation with anti-detection
+
+# IMAP and Email Processing
+imaplib2==3.6
+email-validator==2.0.0
+
+# Proxy Support (CRITICAL for sticky sessions)
+PySocks==1.7.1
+requests[socks]==2.31.0
+
+# HTTP/Network
+requests==2.31.0
+urllib3==2.0.7
+
+# Configuration and Environment
+python-dotenv==1.0.0
+
+# Logging (Enhanced with colors)
+colorlog==6.7.0
+
+# Data Processing
+csv==1.0
+
+# Security and SSL
+cryptography==41.0.7
+certifi==2023.11.17
+
+# Development and Testing
+pytest==7.4.3
+pytest-cov==4.1.0
+
+# Optional: Enhanced proxy support
+requests-socks==1.1.0
+
+# Optional: Advanced email parsing
+email-reply-parser==0.5.12
+
+# Optional: Better random generation for anti-detection
+secrets==1.0.0
+
+# Note: Standard library modules used:
+# - imaplib (built-in)
+# - socket (built-in)
+# - ssl (built-in)
+# - time (built-in)
+# - random (built-in)
+# - hashlib (built-in)
+# - json (built-in)
+# - csv (built-in)
+# - os (built-in)
+# - sys (built-in)
+# - argparse (built-in)
+# - logging (built-in)

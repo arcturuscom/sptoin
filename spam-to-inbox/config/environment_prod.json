@@ -1,0 +1,110 @@
+{
+  "environment": "prod",
+  "description": "Production environment - maximum security and performance",
+  "proxy": {
+    "provider": "smartproxy",
+    "host": "gate.smartproxy.com",
+    "port": 10000,
+    "username": "${SMARTPROXY_USERNAME}",
+    "password": "${SMARTPROXY_PASSWORD}",
+    "sticky_sessions": true,
+    "session_duration": 30,
+    "use_free_proxies": false,
+    "max_retries": 3,
+    "connection_timeout": 10,
+    "notes": "Premium SmartProxy for production reliability"
+  },
+  "email": {
+    "imap_host": "outlook.office365.com",
+    "imap_port": 993,
+    "max_emails_per_account": 100,
+    "batch_size": 25,
+    "connection_timeout": 30,
+    "retry_attempts": 3,
+    "connection_pool_size": 5,
+    "notes": "Optimized settings for high-volume processing"
+  },
+  "behavior": {
+    "enable_human_behavior": true,
+    "fatigue_simulation": true,
+    "min_delay_seconds": 3.0,
+    "max_delay_seconds": 8.0,
+    "distraction_probability": 0.05,
+    "break_probability": 0.02,
+    "inter_account_delay_min": 10.0,
+    "inter_account_delay_max": 20.0,
+    "adaptive_delays": true,
+    "time_based_patterns": true,
+    "notes": "Advanced anti-detection with adaptive behavior"
+  },
+  "logging": {
+    "level": "INFO",
+    "log_dir": "logs",
+    "max_file_size": 52428800,
+    "backup_count": 10,
+    "enable_console": false,
+    "enable_file": true,
+    "colored_output": false,
+    "compress_rotated_logs": true,
+    "remote_logging": {
+      "enabled": false,
+      "endpoint": "${LOG_ENDPOINT}",
+      "api_key": "${LOG_API_KEY}"
+    },
+    "notes": "Production logging with file rotation and optional remote logging"
+  },
+  "security": {
+    "dry_run_mode": false,
+    "enable_rate_limiting": true,
+    "max_concurrent_accounts": 1,
+    "require_confirmation": true,
+    "backup_emails_before_move": true,
+    "max_daily_emails": 1000,
+    "max_hourly_emails": 100,
+    "account_cooldown_hours": 24,
+    "ip_rotation_frequency": 50,
+    "emergency_stop_file": ".emergency_stop",
+    "notes": "Production security with comprehensive limits and safety measures"
+  },
+  "accounts": {
+    "file": "config/accounts_prod.csv",
+    "validate_domains": true,
+    "require_app_passwords": true,
+    "encrypt_credentials": true,
+    "backup_before_processing": true,
+    "health_check_before_processing": true,
+    "notes": "Production accounts with strict validation and encryption"
+  },
+  "monitoring": {
+    "enable_metrics": true,
+    "metrics_endpoint": "${METRICS_ENDPOINT}",
+    "report_errors": true,
+    "error_webhook": "${ERROR_WEBHOOK}",
+    "performance_tracking": true,
+    "session_analytics": true,
+    "alert_thresholds": {
+      "error_rate": 0.1,
+      "success_rate": 0.8,
+      "response_time": 30.0
+    },
+    "health_check_endpoint": "/health",
+    "notes": "Comprehensive production monitoring and alerting"
+  },
+  "performance": {
+    "connection_pooling": true,
+    "cache_configurations": true,
+    "optimize_batch_sizes": true,
+    "parallel_processing": false,
+    "memory_limit_mb": 512,
+    "cpu_limit_percent": 80,
+    "notes": "Production performance optimizations"
+  },
+  "compliance": {
+    "gdpr_compliance": true,
+    "data_retention_days": 30,
+    "audit_logging": true,
+    "consent_verification": true,
+    "data_encryption_at_rest": true,
+    "notes": "Production compliance and data protection"
+  }
+}

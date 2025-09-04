@@ -1,0 +1,4 @@
+email,password,app_password
+real_user1@hotmail.com,real_secure_password_123,real_app_password_16_chars
+real_user2@outlook.com,real_secure_password_456,real_app_password_16_chars
+production_account@live.com,production_password_789,prod_app_password_16_chars

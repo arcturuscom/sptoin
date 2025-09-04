@@ -1,0 +1,4 @@
+email,password,app_password
+staging_user1@hotmail.com,staging_secure_pass_123,
+staging_user2@outlook.com,staging_secure_pass_456,staging_app_password_2fa
+staging_test@live.com,staging_test_password_789,

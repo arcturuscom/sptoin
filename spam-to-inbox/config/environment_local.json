@@ -1,0 +1,56 @@
+{
+  "environment": "local",
+  "description": "Local development environment - safest settings for testing",
+  "proxy": {
+    "provider": "direct",
+    "use_free_proxies": false,
+    "direct_connection": true,
+    "sticky_sessions": false,
+    "notes": "No proxy for local testing - direct IMAP connection"
+  },
+  "email": {
+    "imap_host": "outlook.office365.com",
+    "imap_port": 993,
+    "max_emails_per_account": 5,
+    "batch_size": 3,
+    "connection_timeout": 10,
+    "retry_attempts": 1,
+    "notes": "Conservative settings for local testing"
+  },
+  "behavior": {
+    "enable_human_behavior": false,
+    "fatigue_simulation": false,
+    "min_delay_seconds": 0.5,
+    "max_delay_seconds": 1.0,
+    "distraction_probability": 0.0,
+    "break_probability": 0.0,
+    "inter_account_delay_min": 1.0,
+    "inter_account_delay_max": 2.0,
+    "notes": "Minimal delays for faster local testing"
+  },
+  "logging": {
+    "level": "DEBUG",
+    "log_dir": "logs",
+    "max_file_size": 5242880,
+    "backup_count": 2,
+    "enable_console": true,
+    "enable_file": false,
+    "colored_output": true,
+    "notes": "Console logging only for local development"
+  },
+  "security": {
+    "dry_run_mode": true,
+    "enable_rate_limiting": false,
+    "max_concurrent_accounts": 1,
+    "require_confirmation": false,
+    "backup_emails_before_move": false,
+    "max_daily_emails": 10,
+    "notes": "DRY RUN enforced - no real email modifications"
+  },
+  "accounts": {
+    "file": "config/test_accounts.csv",
+    "validate_domains": false,
+    "require_app_passwords": false,
+    "notes": "Uses test account configuration"
+  }
+}

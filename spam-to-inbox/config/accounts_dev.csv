@@ -1,0 +1,4 @@
+email,password,app_password
+dev_user1@hotmail.com,dev_password_123,
+dev_user2@outlook.com,dev_password_456,app_password_2fa
+test_account@live.com,test_password_789,

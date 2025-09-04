@@ -1,0 +1,58 @@
+{
+  "environment": "dev",
+  "description": "Development environment - free proxies and relaxed settings",
+  "proxy": {
+    "provider": "free",
+    "use_free_proxies": true,
+    "free_proxy_config": "config/free_proxies.json",
+    "sticky_sessions": false,
+    "fallback_direct": true,
+    "rotation_after_errors": 3,
+    "notes": "Uses free proxies with fallback to direct connection"
+  },
+  "email": {
+    "imap_host": "outlook.office365.com",
+    "imap_port": 993,
+    "max_emails_per_account": 10,
+    "batch_size": 5,
+    "connection_timeout": 15,
+    "retry_attempts": 2,
+    "notes": "Moderate limits for development testing"
+  },
+  "behavior": {
+    "enable_human_behavior": true,
+    "fatigue_simulation": false,
+    "min_delay_seconds": 1.0,
+    "max_delay_seconds": 3.0,
+    "distraction_probability": 0.1,
+    "break_probability": 0.05,
+    "inter_account_delay_min": 2.0,
+    "inter_account_delay_max": 5.0,
+    "notes": "Basic human behavior simulation without fatigue"
+  },
+  "logging": {
+    "level": "DEBUG",
+    "log_dir": "logs",
+    "max_file_size": 10485760,
+    "backup_count": 3,
+    "enable_console": true,
+    "enable_file": true,
+    "colored_output": true,
+    "notes": "Full debug logging for development"
+  },
+  "security": {
+    "dry_run_mode": true,
+    "enable_rate_limiting": false,
+    "max_concurrent_accounts": 1,
+    "require_confirmation": false,
+    "backup_emails_before_move": false,
+    "max_daily_emails": 50,
+    "notes": "DRY RUN mode for safe development testing"
+  },
+  "accounts": {
+    "file": "config/accounts_dev.csv",
+    "validate_domains": false,
+    "require_app_passwords": false,
+    "notes": "Development accounts configuration"
+  }
+}
